@@ -1,0 +1,11 @@
+.foo {
+  color: red;
+}
+
+[lang="en"] .foo {
+  color: blue;
+}
+
+.something, .bar:lang(en) {
+  background: transparent;
+}

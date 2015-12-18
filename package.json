@@ -1,0 +1,22 @@
+{
+  "name": "postcss-lang-optimizer",
+  "main": "lib/index.js",
+  "version": "0.1.0",
+  "keywords": "postcss-plugin css internationalization i18n localization l10n",
+  "license": "Apache-2.0",
+  "author": "Chris Eppstein <chris@eppsteins.net> (http://chriseppstein.github.io/)",
+  "description": "Extract language specific selectors to their own css file.",
+  "repository": "http://gitli.corp.linkedin.com/postcss-lang-optimizer/postcss-lang-optimizer.git",
+  "scripts": {
+    "test": "node_modules/.bin/gulp test"
+  },
+  "dependencies": {
+    "postcss": "^5.0.13"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-mocha": "^2.2.0",
+    "jshint": "^2.8.0"
+  }
+}
