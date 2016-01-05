@@ -1,0 +1,6 @@
+.base:lang(en) {
+    color: red
+}
+.base:lang(en-US) {
+    color: white
+}

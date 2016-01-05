@@ -11,15 +11,29 @@ function read(path) {
 
 function assertOutput(name, lang, opts) {
   var output;
+  var validTags = opts.validTags;
+  delete opts.validTags;
   var input  = read(path.join(__dirname, 'fixtures/' + name + '.css'));
   var result = postcss(langOptimizer(opts)).process(input);
   if (lang == "base") {
     output = result.css;
   } else {
     for (var i = 0; i < result.messages.length; i++) {
+      if (result.messages[i].type === "lang-optimization" && validTags) {
+        var found = false;
+        for (var t = 0; t < validTags.length; t++) {
+          if (result.messages[i].language == validTags[t]) {
+            found = true;
+            break;
+          }
+        }
+        if (!found) {
+          assert.fail(result.messages[i].language + " is not a valid language. Expected one of: " +
+                      validTags.join(", "));
+        }
+      }
       if (result.messages[i].type === "lang-optimization" && result.messages[i].language == lang) {
         output = result.messages[i].root.toResult({}).css
-        break;
       }
     }
     if (!output) {
@@ -33,10 +47,25 @@ function assertOutput(name, lang, opts) {
 
 describe("postcss-lang-optimizer", function() {
   it("removes language specific selectors from the base file", function() {
-    assertOutput("basic/main", "base");
+    assertOutput("basic/main", "base", {validTags: ["en"]});
   });
 
-  it("removes language specific selectors from to a language file", function() {
-    assertOutput("basic/main", "en");
+  it("extracts language specific selectors to a language file", function() {
+    assertOutput("basic/main", "en", {validTags: ["en"]});
+  });
+
+  it("ignores locale regions by default", function() {
+    assertOutput("regions/ignored", "base", {validTags: ["en"]});
+    assertOutput("regions/ignored", "en", {validTags: ["en"]});
+  });
+
+  it("can optimize by region when enabled", function() {
+    assertOutput("regions/optimized", "base", {subtags: true, validTags: ["en", "en-us"]});
+    assertOutput("regions/optimized", "en", {subtags: true, validTags: ["en", "en-us"]});
+    assertOutput("regions/optimized", "en-us", {subtags: true, validTags: ["en", "en-us"]});
+  });
+
+  it("wildcard langs are left in the base file.", function() {
+    assertOutput("wildcards/main", "base", {validTags: []});
   });
 });

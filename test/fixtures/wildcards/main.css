@@ -1,0 +1,7 @@
+.base {
+  color: red;
+}
+
+.base:lang(*-CH) {
+  color: blue;
+}
