@@ -8,6 +8,10 @@ along the way. After processing, the language specific selectors can be
 written out to their own files or re-combined in various ways according
 to how you desire to send the locale specific CSS over the wire.
 
+If a single selector has more than one lang or is combined with
+non-lang-specific selectors, then the ruleset is duplicated and the
+language specific selectors are removed.
+
 ### API
 
 ```js
@@ -17,8 +21,10 @@ postcss = require("postcss");
 var optimizerOptions = {};
 var input = ".foo {font-size: 14px; } .foo:lang(zh) { font-size: 18px; }"
 var result = postcss(langOptimizer(optimizerOptions)).process(input);
-result.css; // language agnostic CSS stripped of all language specific rulesets
-langOptimizer.extract(result, "zh"); // zh-specific CSS
+// language agnostic CSS stripped of all language specific rulesets
+result.css; // => ".foo {font-size: 14px; }"
+// zh-specific CSS
+langOptimizer.extract(result, "zh"); // => " .foo:lang(zh) { font-size: 18px; }"
 ```
 
 ### Options:
