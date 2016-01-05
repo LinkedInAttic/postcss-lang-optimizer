@@ -18,27 +18,24 @@ function assertOutput(name, lang, opts) {
   if (lang == "base") {
     output = result.css;
   } else {
-    for (var i = 0; i < result.messages.length; i++) {
-      if (result.messages[i].type === "lang-optimization" && validTags) {
-        var found = false;
-        for (var t = 0; t < validTags.length; t++) {
-          if (result.messages[i].language == validTags[t]) {
-            found = true;
-            break;
+    if (validTags) {
+      for (var i = 0; i < result.messages.length; i++) {
+        if (result.messages[i].type === "lang-optimization") {
+          var found = false;
+          for (var t = 0; t < validTags.length; t++) {
+            if (result.messages[i].language == validTags[t]) {
+              found = true;
+              break;
+            }
+          }
+          if (!found) {
+            assert.fail(result.messages[i].language + " is not a valid language. Expected one of: " +
+                        validTags.join(", "));
           }
         }
-        if (!found) {
-          assert.fail(result.messages[i].language + " is not a valid language. Expected one of: " +
-                      validTags.join(", "));
-        }
-      }
-      if (result.messages[i].type === "lang-optimization" && result.messages[i].language == lang) {
-        output = result.messages[i].root.toResult({}).css
       }
     }
-    if (!output) {
-      output = "";
-    }
+    output = langOptimizer.extract(result, lang) || "";
   }
   var expected = read(path.join(__dirname, 'fixtures/' + name + '_' + lang + '.expected.css'));
   assert.equal(output.trim(), expected.trim());
