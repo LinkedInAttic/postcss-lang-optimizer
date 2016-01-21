@@ -1,7 +1,7 @@
 {
   "name": "postcss-lang-optimizer",
   "main": "lib/index.js",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "keywords": "postcss-plugin css internationalization i18n localization l10n",
   "license": "Apache-2.0",
   "copyright": "Copyright 2016 LinkedIn Corp.  All rights reserved.",
