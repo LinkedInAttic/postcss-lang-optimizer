@@ -7,7 +7,7 @@
   "copyright": "Copyright 2016 LinkedIn Corp.  All rights reserved.",
   "author": "Chris Eppstein <chris@eppsteins.net> (http://chriseppstein.github.io/)",
   "description": "Extract language specific selectors to their own css file.",
-  "repository": "http://gitli.corp.linkedin.com/postcss-lang-optimizer/postcss-lang-optimizer.git",
+  "repository": "https://github.com/linkedin/postcss-lang-optimizer.git",
   "scripts": {
     "test": "node_modules/.bin/gulp test"
   },
