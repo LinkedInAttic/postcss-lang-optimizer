@@ -37,3 +37,9 @@ would each be extracted to their own file.
 
 * Wildcard language matching E.g. `:lang(*-CH)` - These will be left in
   the base file.
+
+### Known Issues:
+
+* Sourcemaps will not work with language specific output files.
+* There's not currently any way to except a lang selector from being
+  extracted.

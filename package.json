@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "keywords": "postcss-plugin css internationalization i18n localization l10n",
   "license": "Apache-2.0",
+  "copyright": "Copyright 2016 LinkedIn Corp.  All rights reserved.",
   "author": "Chris Eppstein <chris@eppsteins.net> (http://chriseppstein.github.io/)",
   "description": "Extract language specific selectors to their own css file.",
   "repository": "http://gitli.corp.linkedin.com/postcss-lang-optimizer/postcss-lang-optimizer.git",
