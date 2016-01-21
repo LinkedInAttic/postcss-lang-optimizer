@@ -19,10 +19,10 @@ langOptimizer = require("postcss-lang-optimizer");
 postcss = require("postcss");
 
 var optimizerOptions = {};
-var input = ".foo {font-size: 14px; } .foo:lang(zh) { font-size: 18px; }"
+var input = ".foo { font-size: 14px; } .foo:lang(zh) { font-size: 18px; }"
 var result = postcss(langOptimizer(optimizerOptions)).process(input);
 // language agnostic CSS stripped of all language specific rulesets
-result.css; // => ".foo {font-size: 14px; }"
+result.css; // => ".foo { font-size: 14px; }"
 // zh-specific CSS
 langOptimizer.extract(result, "zh"); // => " .foo:lang(zh) { font-size: 18px; }"
 ```
