@@ -1,0 +1,32 @@
+{
+  "name": "ember-cli-shims",
+  "main": [
+    "app-shims.js",
+    "test-shims.js"
+  ],
+  "version": "0.0.6",
+  "homepage": "https://github.com/ember-cli/ember-cli-shims",
+  "authors": [
+    "Stefan Penner <stefan.penner@gmail.com>",
+    "Manuel Wiedenmann <manuel@funkensturm.de>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ember": ">=1.4"
+  },
+  "_release": "0.0.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.6",
+    "commit": "dcab43b58d5698690050bb9a46ead5c8663c7da1"
+  },
+  "_source": "git://github.com/ember-cli/ember-cli-shims.git",
+  "_target": "0.0.6",
+  "_originalSource": "ember-cli-shims"
+}
