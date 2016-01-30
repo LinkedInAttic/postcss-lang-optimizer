@@ -1,0 +1,11 @@
+.foo {
+  color: red;
+}
+
+.foo:lang(de) {
+  color: green;
+}
+
+.foo:lang(zh-ZH) {
+  color: blue;
+}

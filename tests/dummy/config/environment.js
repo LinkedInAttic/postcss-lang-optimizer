@@ -14,6 +14,13 @@ module.exports = function(environment) {
     },
 
     APP: {
+      // langOptimizer: {
+      //   includeBaseFile: false,
+      //   filenameForLang: function(baseFilename, lang) {
+      //     return baseFilename.replace(".css", "-" + lang + ".css")
+      //   },
+      //   langs: ["en", "de", "zh"]
+      // }
       // Here you can pass flags/options to your application instance
       // when it is created
     }
