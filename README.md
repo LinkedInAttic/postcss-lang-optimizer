@@ -14,7 +14,10 @@ passing options to your APP under the `langOptimizer` key:
 {
   APP: {
      langOptimizer: {
-       // includeBaseFile defaults to true
+       // includeBaseFile controls whether the base css is included
+       // in every language-specific output file. When set to `false`,
+       // only the lang-specific selectors are output to the language
+       // specific file. Defaults to `true`.
        includeBaseFile: true,
        // filenameForLang is optional, when omited the filename is "<basename>_<lang>.css"
        filenameForLang: function(baseFilename, lang) {
