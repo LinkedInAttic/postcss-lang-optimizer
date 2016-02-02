@@ -43,3 +43,8 @@ would each be extracted to their own file.
 * Sourcemaps will not work with language specific output files.
 * There's not currently any way to except a lang selector from being
   extracted.
+
+### Ember Addon
+
+There is an ember addon for this plugin. You can find it in the
+[`ember-addon` branch](https://github.com/linkedin/postcss-lang-optimizer/tree/ember-addon).
