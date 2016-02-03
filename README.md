@@ -4,6 +4,9 @@ This addon causes language specific rulesets in CSS to be extracted into
 per-language css files. The original CSS file has the language specific
 rulesets removed from it.
 
+This plugin uses postcss-lang-optimizer and adapts it for use in
+Ember.js projects.
+
 ## Configuration
 
 In environment.js you can customize the behavior of this addon by
@@ -28,6 +31,7 @@ passing options to your APP under the `langOptimizer` key:
        // Ensures a file is written for each of these languages (and only these languages)
        // even if they are or are not specified in the source CSS.
        // If omitted, languages are discovered from the source CSS file.
+       // This property can also be set to a function that returns an array of langs.
        langs: ["en", "de", "zh"]
      }
   }

@@ -25,6 +25,9 @@ module.exports = {
           resultHandler: function(result, filter, relativePath, addOutputFile) {
             var langResults = langOptimizer.extractAll(result);
             var langs = config.langs ? config.langs : Object.keys(langResults)
+            if (typeof langs === "function") {
+              langs = langs();
+            }
             langs.forEach(function (lang) {
               var langFilename, langCSS;
               if (config.filenameForLang) {

@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-css-lang-optimizer",
   "version": "1.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Extract language specific CSS to it's own language-specific CSS file.",
   "directories": {
     "doc": "doc",
     "test": "tests"
