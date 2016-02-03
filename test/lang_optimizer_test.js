@@ -75,6 +75,11 @@ describe("postcss-lang-optimizer", function() {
     assertOutput("wildcards/main", "base", {validTags: []});
   });
 
+  xit("supports media queries", function() {
+    assertOutput("basic/directives", "base", {validTags: ["en"]});
+    assertOutput("basic/directives", "en", {validTags: ["en"]});
+  });
+
   describe("helpers", function() {
     it("can extract all languages at once", function() {
       var input = ".foo { color: red; }\n" +

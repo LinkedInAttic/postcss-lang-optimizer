@@ -1,0 +1,3 @@
+@media (max-device-width: 500px) {
+  .foo { color: red; }
+}
