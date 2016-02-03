@@ -1,0 +1,22 @@
+.base {
+  color: white;
+}
+
+/* lang-optimizer: enable */
+/* lang-optimizer: disable */
+/* random comment 1 */
+.base:lang(de) {
+  color: blue;
+}
+
+/* random comment 2 */
+.base:lang(zh) {
+  color: red
+}
+/* lang-optimizer: disable */
+/* lang-optimizer: enable */
+
+/* random comment 3 */
+.base:lang(en) {
+  color: blue;
+}

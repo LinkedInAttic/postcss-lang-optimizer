@@ -27,6 +27,21 @@ result.css; // => ".foo { font-size: 14px; }"
 langOptimizer.extract(result, "zh"); // => " .foo:lang(zh) { font-size: 18px; }"
 ```
 
+### Control Comments
+
+You can disable and re-enable the language optimizer for portions of the
+CSS file by using control comments. When these comments are encountered,
+it will change the enabled state of the optimizer until the end of the
+file or until another control comment is encountered.
+
+```
+/* lang-optimizer: disable */
+```
+
+```
+/* lang-optimizer: enable */
+```
+
 ### Options:
 
 * `subtags` - When set to true, then any language selectors will be
@@ -41,8 +56,6 @@ would each be extracted to their own file.
 ### Known Issues:
 
 * Sourcemaps will not work with language specific output files.
-* There's not currently any way to except a lang selector from being
-  extracted.
 
 ### Ember Addon
 

@@ -80,6 +80,11 @@ describe("postcss-lang-optimizer", function() {
     assertOutput("basic/directives", "en", {validTags: ["en"]});
   });
 
+  it("can preserve lang-specific selectors with magic comments", function() {
+    assertOutput("preserved/main", "base", {validTags: ["en"]});
+    assertOutput("preserved/main", "en", {validTags: ["en"]});
+  });
+
   describe("helpers", function() {
     it("can extract all languages at once", function() {
       var input = ".foo { color: red; }\n" +
