@@ -130,4 +130,18 @@ describe("LangOptimizer", function () {
         });
       });
   });
+
+  it("flips rtl langs", function (done) {
+    var optimizer = LangOptimizer(fixtureSourceDir("rtlLangs"), {
+      rtlLangs: ["ar"]
+    });
+    var builder = new broccoli.Builder(optimizer);
+
+    build(builder)
+      .then(function(outputDir) {
+        diffDirs(outputDir, fixtureOutputDir("rtlLangs"), function() {
+          done();
+        });
+      });
+  });
 });

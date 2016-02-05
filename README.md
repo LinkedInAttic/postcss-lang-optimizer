@@ -39,7 +39,12 @@ You can pass options to this plugin to control its behavior.
   // even if they are or are not specified in the source CSS.
   // If omitted, languages are discovered from the source CSS file.
   // This property can also be set to a function that returns an array of langs.
-  langs: ["en", "de", "zh"]
+  langs: ["en", "de", "zh"],
+  // The folowing langs will be RTL processed with rtlcss. Highly
+  // recommend not setting `includeBaseFile` to `false` when using rtl flipping.
+  rtlLangs: ["ar", "he"],
+  // The following options will be passed to the rtlcss plugin:
+  rtlOptions: { }
 }
 ```
 

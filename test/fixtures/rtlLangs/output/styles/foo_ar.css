@@ -1,0 +1,7 @@
+p.base {
+  float: right;
+}
+
+p:lang(ar) {
+    border-width: 0 2px 0 1px
+}
