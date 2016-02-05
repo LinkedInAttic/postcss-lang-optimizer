@@ -1,0 +1,7 @@
+p.base {
+  color:red;
+}
+
+p:lang(en) {
+    color: blue
+}
