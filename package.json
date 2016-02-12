@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "broccoli-postcss-sourcemaps": "^2.2.0-sourcemaps.0",
-    "postcss-lang-optimizer": "^1.1.0",
+    "postcss-lang-optimizer": "^1.2.1",
     "rtlcss": "^1.7.3"
   },
   "devDependencies": {
