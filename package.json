@@ -1,7 +1,7 @@
 {
   "name": "broccoli-css-lang-optimizer",
   "description": "Extract Lang-specific CSS rulesets to lang-specific files.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Chris Eppstein <chris@eppsteins.net>",
   "main": "lib/langOptimizer.js",
   "license": "Apache-2.0",
