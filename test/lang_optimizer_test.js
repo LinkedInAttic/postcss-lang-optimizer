@@ -85,6 +85,13 @@ describe("postcss-lang-optimizer", function() {
     assertOutput("preserved/main", "en", {validTags: ["en"]});
   });
 
+  it("only outputs one message per lang", function() {
+    var input  = read(path.join(__dirname, 'fixtures/basic/repeated_lang.css'));
+    var result = postcss(langOptimizer({})).process(input);
+    assert.equal(result.messages.length, 1);
+  });
+
+
   describe("helpers", function() {
     it("can extract all languages at once", function() {
       var input = ".foo { color: red; }\n" +

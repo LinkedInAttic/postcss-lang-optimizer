@@ -1,0 +1,6 @@
+.foo:lang(en) {
+    width: 200px
+}
+.bar:lang(en) {
+    border: 1px solid black
+}
