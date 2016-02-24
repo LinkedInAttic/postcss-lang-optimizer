@@ -1,16 +1,14 @@
-# 1.2.4
+# 1.1.1
 
-* Eyeglass 0.8 deprecated several APIs, this release upgrades eyeglass
-  and uses the new, undeprecated APIs. No API changes to
-  broccoli-eyeglass at this time.
+* Pick up new version of postcss-lang-optimizer.
+* Fix race condition when rtl processing languages.
 
-* Use node-sass 3.4.2 now that regressions have been fixed.
+# 1.1.0
 
-# 1.2.3
+New Features:
 
-* Lock down node-sass to 3.3 until node-sass regressions in 3.4 can be fixed.
+* RTL transformation of specified languages using rtlcss.
 
-# 1.2.2
+# 1.0.0
 
-* Fix bug where only the first asset location is registered.
-  [Pull Request](https://github.com/sass-eyeglass/broccoli-eyeglass/pull/20)
+Intial release.
