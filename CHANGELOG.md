@@ -1,7 +1,11 @@
+# 1.1.2
+
+* Pick up new version of postcss-lang-optimizer to get at-rule support.
+* Fix race condition when rtl processing languages.
+
 # 1.1.1
 
-* Pick up new version of postcss-lang-optimizer.
-* Fix race condition when rtl processing languages.
+* Fix performance bug by picking up new version of postcss-lang-optimizer.
 
 # 1.1.0
 
