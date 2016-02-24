@@ -75,7 +75,7 @@ describe("postcss-lang-optimizer", function() {
     assertOutput("wildcards/main", "base", {validTags: []});
   });
 
-  xit("supports media queries", function() {
+  it("supports media queries", function() {
     assertOutput("basic/directives", "base", {validTags: ["en"]});
     assertOutput("basic/directives", "en", {validTags: ["en"]});
   });

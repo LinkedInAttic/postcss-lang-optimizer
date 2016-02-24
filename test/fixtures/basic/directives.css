@@ -1,4 +1,16 @@
 @media (max-device-width: 500px) {
   .foo { color: red; }
   .foo:lang(en) { color: blue; }
+  .foo:lang(en) a { color: red; }
+}
+
+.foo:lang(en) { color: orange; }
+
+@media (max-device-width: 500px) {
+  @media (orientation: landscape) {
+    .foo:lang(en) { color: green; }
+    .foo:lang(en) { color: yellow; }
+  }
+  .foo:lang(en) { color: purple; }
+  .foo:lang(en) { color: #c75; }
 }
