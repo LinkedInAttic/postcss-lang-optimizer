@@ -1,3 +1,13 @@
+# 1.1.4
+
+* update broccoli-postcss-sourcemaps to version `2.2.0-sourcemaps.1`
+  which fixes a bug with warm cache rebuilds.
+
+# 1.1.3
+
+* Pick up new version of postcss-lang-optimizer to fix bug for at-rules
+  that have no child nodes.
+
 # 1.1.2
 
 * Pick up new version of postcss-lang-optimizer to get at-rule support.
