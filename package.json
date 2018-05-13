@@ -12,14 +12,14 @@
     "test": "node_modules/.bin/gulp test"
   },
   "dependencies": {
-    "postcss": "^5.0.13"
+    "postcss": "^6.0.22"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-release": "^0.13.0",
+    "grunt": "^1.0.2",
+    "grunt-release": "^0.14.0",
     "gulp": "^3.9.0",
     "gulp-jshint": "^2.0.0",
-    "gulp-mocha": "^2.2.0",
+    "gulp-mocha": "^5.0.0",
     "jshint": "^2.8.0"
   }
 }
