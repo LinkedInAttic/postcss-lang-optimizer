@@ -1,5 +1,7 @@
 # PostCSS Lang Optimizer
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/linkedin/postcss-lang-optimizer.svg)](https://greenkeeper.io/)
+
 Extract rulesets that are language specific into their own file so they
 can be served at runtime in a more optimal way.
 
