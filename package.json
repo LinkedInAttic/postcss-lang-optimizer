@@ -1,7 +1,7 @@
 {
   "name": "broccoli-css-lang-optimizer",
   "description": "Extract Lang-specific CSS rulesets to lang-specific files.",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Chris Eppstein <chris@eppsteins.net>",
   "main": "lib/langOptimizer.js",
   "license": "Apache-2.0",
@@ -10,7 +10,8 @@
     "url": "https://github.com/linkedin/postcss-lang-optimizer.git#broccoli-plugin"
   },
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "release": "grunt release"
   },
   "keywords": [
     "broccoli-plugin",
@@ -29,6 +30,7 @@
     "eyeglass-dev-eslint": "*",
     "glob": "^6.0.4",
     "grunt": "^0.4.5",
+    "grunt-cli": "^1.3.2",
     "grunt-release": "^0.12.0",
     "gulp": "^3.9.0",
     "gulp-eslint": "1.1.1",
