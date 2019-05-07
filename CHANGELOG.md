@@ -1,3 +1,15 @@
+# 2.0.2
+
+* Perf fix: Only stringify the languages actually being output.
+
+# 2.0.1
+
+* Require latest release of postcss-lang-optimizer.
+
+# 2.0.0
+
+* Major release upgrade of rtlcss.
+
 # 1.1.4
 
 * update broccoli-postcss-sourcemaps to version `2.2.0-sourcemaps.1`
