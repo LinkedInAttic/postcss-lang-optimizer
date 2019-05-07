@@ -43,7 +43,7 @@
     "css"
   ],
   "dependencies": {
-    "broccoli-css-lang-optimizer": "^2.0.1",
+    "broccoli-css-lang-optimizer": "^2.0.2",
     "ember-cli-babel": "^5.1.5"
   },
   "ember-addon": {
