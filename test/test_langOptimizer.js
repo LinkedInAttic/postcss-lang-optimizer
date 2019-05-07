@@ -71,13 +71,13 @@ describe("LangOptimizer", function () {
   });
 
   it("can be instantiated by function call", function (done) {
-    var optimizer = LangOptimizer(fixtureSourceDir("basicProject"));
+    var optimizer = LangOptimizer(fixtureSourceDir("basicProject")); // eslint-disable-line new-cap
     assert(optimizer instanceof LangOptimizer);
     done();
   });
 
   it("splits css up by languages", function (done) {
-    var optimizer = LangOptimizer(fixtureSourceDir("basicProject"), {includeBaseFile: false});
+    var optimizer = new LangOptimizer(fixtureSourceDir("basicProject"), {includeBaseFile: false});
     var builder = new broccoli.Builder(optimizer);
 
     build(builder)
@@ -89,7 +89,7 @@ describe("LangOptimizer", function () {
   });
 
   it("includes the base file by default", function (done) {
-    var optimizer = LangOptimizer(fixtureSourceDir("includesBaseFile"));
+    var optimizer = new LangOptimizer(fixtureSourceDir("includesBaseFile"));
     var builder = new broccoli.Builder(optimizer);
 
     build(builder)
@@ -101,7 +101,7 @@ describe("LangOptimizer", function () {
   });
 
   it("allows custom filenames", function (done) {
-    var optimizer = LangOptimizer(fixtureSourceDir("customFilenames"), {
+    var optimizer = new LangOptimizer(fixtureSourceDir("customFilenames"), {
       includeBaseFile: false,
       filenameForLang: function(baseFilename, lang) {
          return baseFilename.replace(".css", "-" + lang + ".css");
@@ -118,7 +118,7 @@ describe("LangOptimizer", function () {
   });
 
   it("allows specified langs", function (done) {
-    var optimizer = LangOptimizer(fixtureSourceDir("specifiedLangs"), {
+    var optimizer = new LangOptimizer(fixtureSourceDir("specifiedLangs"), {
       langs: ["en", "zh"]
     });
     var builder = new broccoli.Builder(optimizer);
@@ -132,7 +132,7 @@ describe("LangOptimizer", function () {
   });
 
   it("flips rtl langs", function (done) {
-    var optimizer = LangOptimizer(fixtureSourceDir("rtlLangs"), {
+    var optimizer = new LangOptimizer(fixtureSourceDir("rtlLangs"), {
       rtlLangs: ["ar"]
     });
     var builder = new broccoli.Builder(optimizer);
