@@ -14,7 +14,6 @@ module.exports = {
       toTree: function(tree, inputPath, outputPath, options) {
         var config = addon.project.config(addon.app.env).langOptimizer || {};
         var tree = new LangOptimizer(tree, config); 
-        console.log(tree);
         return tree;
       }
     });
