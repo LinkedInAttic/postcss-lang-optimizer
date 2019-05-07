@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-css-lang-optimizer",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Extract language specific CSS to it's own language-specific CSS file.",
   "directories": {
     "doc": "doc",
